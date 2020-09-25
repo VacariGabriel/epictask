@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="_template :: head"></head>
+<body>
+<h1>Tarefas</h1>
+
+<nav th:include="_template :: menu('task')" ></nav>
+
+<a href="/task/new" class="btn-sm btn-primary">
+	<span class="material-icons">add</span>
+</a>
+
+<div class="tasks">
+	<div class="task" th:each="task : ${tasks}">
+		<div class="card-task">
+			<img class="avatar" src="foto.jpg">
+			<h2 th:text="${task.title}"></h2>
+			<div class="point">
+				<span class="material-icons">star</span>
+				<span>100</span>
+			</div>
+
+			<div class="status">
+				<svg>
+					<circle cx="70" cy="70" r="70"></circle>
+					<circle id="status" th:field="*{status}"th:value="${task.status}"cx="70" cy="70" r="70" th:style="${'stroke-dashoffset:' + (440 - (440 * task.status) / 100)}"></circle>
+				</svg>
+				<div class="number">
+					<h2 th:text="${task.status} + '%'"></h2>
+				</div>
+			</div>
+		</div>
+		<div class="task-action">
+			<button class="btn-hand">
+				<span class="material-icons">pan_tool</span>
+			</button>
+			<a th:href="${'/task/' + task.id }"class="btn btn-sm yellow">
+				<span class="material-icons">edit</span>
+			</a>
+		</div>
+	</div>
+</div>
+</body>
+<script>
+	const teste = document.querySelector("#status").value
+	console.log("testando",teste)
+</script>
+</html>
