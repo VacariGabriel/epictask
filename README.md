@@ -1,4 +1,4 @@
-# Epick Task [TURMA 2TDS G]
+# Epick Task [TURMA 2TDSG]
 
 App de controle de tarefas gamificado para equipes auto gerenciáveis.
 
@@ -6,12 +6,8 @@ App de controle de tarefas gamificado para equipes auto gerenciáveis.
 
 Esse repositório faz parte da disciplina de Digital Business Enablement da FIAP
 
-## Funcionalidades
+## Aluno
 
-- [X] Tratamento inicial das rotas
-- [X] Template com Thymeleaf
-- [X] Cadastro de usuário
-- [X] Validação dos dados de cadastro
-- [ ] Lista de usuários
-- [ ] Exclusão de usuários
-- [ ] Internacionalização
+Gabriel Vacari Cruz 
+
+82766
